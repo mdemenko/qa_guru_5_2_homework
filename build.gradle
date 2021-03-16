@@ -1,5 +1,5 @@
 plugins {
-    id 'java-library'
+    id "java-library"
 }
 
 repositories {
@@ -17,21 +17,9 @@ dependencies {
 }
 
 tasks.withType(JavaCompile) {
-    options.encoding = 'UTF-8'
+    options.encoding = "UTF-8"
 }
 
 test {
     useJUnitPlatform()
-}
-
-task one_test(type: Test) {
-    useJUnitPlatform {
-        includeTags 'one'
-    }
-}
-
-task without_one_test(type: Test) {
-    useJUnitPlatform {
-        excludeTags 'one'
-    }
 }
